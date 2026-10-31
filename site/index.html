@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>worshiptechu status</title>
+<meta name="description" content="Is WorshipTechU working right now? Live status for the website, the app, canyonAI and emails.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0D0D12">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/manrope-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="status.css">
+</head>
+<body>
+<a class="skip" href="#main">skip to status</a>
+<header class="top">
+  <a class="brand" href="https://worshiptechu.ca/" aria-label="worshiptechu home"><img src="logo.svg" alt="worshiptechu" width="170" height="20"></a>
+  <a class="back" href="https://worshiptechu.ca/">worshiptechu.ca</a>
+</header>
+<main id="main">
+  <section id="summary" class="summary state-unknown" aria-live="polite">
+    <span class="dot" aria-hidden="true"></span>
+    <div>
+      <h1 id="headline">checking now</h1>
+      <p id="checked" class="muted">one moment</p>
+    </div>
+  </section>
+
+  <section id="incident" class="card incident" hidden aria-labelledby="incident-title">
+    <p class="eyebrow">what we know</p>
+    <h2 id="incident-title"></h2>
+    <ul id="incident-updates" class="updates"></ul>
+  </section>
+
+  <section class="card" aria-labelledby="services-title">
+    <h2 id="services-title" class="eyebrow">services, last 90 days</h2>
+    <ul id="services" class="services"></ul>
+    <ul class="legend" aria-label="colour key">
+      <li><span class="key up"></span>working</li>
+      <li><span class="key slow"></span>slow</li>
+      <li><span class="key down"></span>down</li>
+      <li><span class="key none"></span>no data</li>
+    </ul>
+  </section>
+
+  <p class="note">if the app is down, your sunday still works. downloaded sos steps, cheat sheets and courses open offline.</p>
+  <noscript><p class="note">this page needs javascript to show live status. the raw data is in <a href="status.json">status.json</a>.</p></noscript>
+</main>
+<footer class="foot">
+  <p>checked every 5 minutes from outside our own servers. times are your local time.</p>
+  <p><a href="mailto:info@worshiptechu.ca">info@worshiptechu.ca</a></p>
+</footer>
+<script src="status.js"></script>
+</body>
+</html>

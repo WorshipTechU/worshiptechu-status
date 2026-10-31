@@ -1,0 +1,7 @@
+# Public URLs only, no keys. One per line: url service=<website|app|canyonai|emails> [expect=200,401]
+# A service with no line is not shown on the page. Several lines for one service show the worst result.
+https://worshiptechu.ca service=website
+https://worshiptechu-api.vercel.app/v1/health service=app
+# Add when they exist (public health URLs):
+# https://<canyonAI health URL> service=canyonai
+# https://<email path health URL> service=emails
